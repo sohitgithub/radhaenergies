@@ -1,0 +1,113 @@
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes loaderPulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(255, 213, 79, 0.4)); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(0, 212, 255, 0.55)); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -20px); }
+}
+@keyframes panelFloat {
+  0%, 100% { transform: translateY(0) rotateX(5deg); }
+  50% { transform: translateY(-15px) rotateX(8deg); }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes mapPulse {
+  0%, 100% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.15); }
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes barGrow {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+@keyframes rayPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.35); }
+  50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.45); }
+}
+@keyframes energyRingSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes energyRingPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+@keyframes sunCorePulse {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.06); filter: brightness(1.15); }
+}
+@keyframes panelFloat {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-14px) rotate(2deg); }
+}
+@keyframes boltFloat {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.85; }
+  50% { transform: translateY(-10px) scale(1.08); opacity: 1; }
+}
+@keyframes statFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-6px); }
+}
+@keyframes orbitCW {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(42%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(42%) rotate(-360deg); }
+}
+@keyframes orbitCCW {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(32%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(-360deg) translateX(32%) rotate(360deg); }
+}
+@keyframes btnGlowPulse {
+  0%, 100% { box-shadow: 0 4px 24px rgba(29, 111, 184, 0.35); }
+  50% { box-shadow: 0 8px 36px rgba(201, 135, 10, 0.4); }
+}
+
+.solar-ray {
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: linear-gradient(180deg, var(--solar-yellow), transparent);
+  transform-origin: bottom center;
+  animation: rayPulse 3s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+.motion-blur-enter {
+  animation: motionBlurIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes motionBlurIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}

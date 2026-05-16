@@ -1,0 +1,139 @@
+/* Font Awesome icon wrappers — professional corporate style */
+.icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.icon-wrap i {
+  font-size: inherit;
+  line-height: 1;
+}
+
+.icon-wrap--service {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius);
+  background: var(--color-accent);
+  color: var(--white);
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.glass-card:hover .icon-wrap--service {
+  background: var(--color-accent-hover);
+}
+
+.icon-wrap--trust {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  background: var(--bg-muted);
+  color: var(--color-accent);
+  font-size: 1.15rem;
+  border: 1px solid var(--border);
+}
+
+.icon-wrap--contact {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.icon-wrap--project {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: var(--bg-muted);
+  color: var(--color-accent);
+  font-size: 2.5rem;
+}
+
+.icon-wrap--hero {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  background: linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: var(--white);
+  font-size: 5rem;
+  border-radius: var(--radius-lg);
+}
+
+.icon-wrap--team {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--bg-muted);
+  color: var(--color-accent);
+  font-size: 2.75rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.icon-wrap--stat {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 0.75rem;
+  border-radius: var(--radius);
+  background: rgba(29, 111, 184, 0.08);
+  color: var(--color-accent);
+  font-size: 1.2rem;
+}
+
+.icon-wrap--marquee {
+  margin-right: 0.5rem;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+}
+
+.icon-wrap--social {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+.social-links a:hover .icon-wrap--social {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: var(--bg-surface);
+}
+
+.icon-wrap--badge {
+  color: var(--color-highlight);
+  font-size: 0.85rem;
+}
+
+.icon-wrap--quick {
+  font-size: 1rem;
+}
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.theme-toggle:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.map-address-bar .icon-wrap--contact {
+  width: 44px;
+  height: 44px;
+  font-size: 1rem;
+}
+
+.service-page-card .icon-wrap--service {
+  margin-bottom: 0;
+}
