@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Radha Energies services — rooftop solar, commercial & industrial systems, maintenance, EV charging integration.">
   <title>Services | Radha Energies</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +16,6 @@
 </head>
 <body>
   <div class="page-transition" aria-hidden="true"></div>
-  <div class="loader" aria-label="Loading">
-    <div class="loader-rays"></div>
-    <img src="assets/logo.png" alt="Radha Energies" class="loader-logo" width="120" height="120">
-    <div class="loader-ring"></div>
-    <p class="loader-text">Harnessing Solar Power</p>
-  </div>
 
   <header class="header">
     <nav class="nav container">
@@ -29,29 +23,35 @@
         <img src="assets/logo.png" alt="Radha Energies Logo" class="logo-img" width="72" height="72">
         <span class="logo-text">Radha Energies</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>About</span></a></li>
+        <li><a href="services.html" class="active"><i class="fa-solid fa-solar-panel" aria-hidden="true"></i><span>Services</span></a></li>
+        <li><a href="projects.html"><i class="fa-solid fa-building" aria-hidden="true"></i><span>Projects</span></a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact</span></a></li>
+        <li class="nav-cta-mobile-wrap">
+          <a href="contact.html" class="nav-cta-mobile">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            <span>Get Free Quote</span>
+          </a>
+        </li>
       </ul>
       <div class="nav-actions">
         <button class="theme-toggle" type="button" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
         <a href="contact.html" class="nav-cta">Get Quote</a>
-        <button class="menu-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="page-hero">
-      <div class="hero-bg hero-bg--media" style="position:absolute;inset:0;z-index:-1;"></div>
+      <div class="hero-bg hero-bg--media"></div>
       <div class="hero-gradient-orb hero-orb-2" data-parallax="0.08" style="position:absolute;"></div>
       <div class="container">
         <nav class="breadcrumb"><a href="index.html">Home</a> / <span>Services</span></nav>
         <h1>Complete <span class="text-gradient">Solar Solutions</span></h1>
-        <p class="lead">From rooftop installations to industrial megawatts — engineered for performance, built to last.</p>
+        <p class="lead">From home rooftops to local shops and workshops — honest installs built to last.</p>
       </div>
     </section>
 
@@ -72,7 +72,7 @@
           <div>
             <h3>Commercial Solar Solutions</h3>
             <p style="color:var(--text-muted);margin-top:0.5rem;">Office buildings, malls, and institutions — reduce operating costs with scalable solar.</p>
-            <ul class="service-features"><li>10–500 kW</li><li>PPA Models</li><li>Tax Benefits</li></ul>
+            <ul class="service-features"><li>5–50 kW</li><li>PPA Models</li><li>Tax Benefits</li></ul>
           </div>
         </div>
         <div class="glass-card service-page-card reveal service-page-card--media">
@@ -80,8 +80,8 @@
           <span class="icon-wrap icon-wrap--service"><i class="fa-solid fa-industry" aria-hidden="true"></i></span>
           <div>
             <h3>Industrial Solar Systems</h3>
-            <p style="color:var(--text-muted);margin-top:0.5rem;">Megawatt plants for factories and warehouses with 24/7 monitoring and O&M.</p>
-            <ul class="service-features"><li>1MW+ Capacity</li><li>Grid Integration</li><li>Remote Monitoring</li></ul>
+            <p style="color:var(--text-muted);margin-top:0.5rem;">Larger systems for workshops & small industry and warehouses with 24/7 monitoring and O&M.</p>
+            <ul class="service-features"><li>Up to 100 kW</li><li>Grid Integration</li><li>Remote Monitoring</li></ul>
           </div>
         </div>
         <div class="glass-card service-page-card reveal service-page-card--media">
@@ -124,19 +124,19 @@
         <div class="media-grid">
           <article class="media-card media-card--video reveal">
             <div class="video-embed">
-              <iframe src="https://www.youtube.com/embed/xKxrkGTscVI" title="How solar panels work" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/xKxrkht7CpY?rel=0&modestbranding=1" title="How solar panels work" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             </div>
             <p class="media-card-caption">How solar panels convert sunlight into power</p>
           </article>
           <article class="media-card media-card--video reveal">
             <div class="video-embed">
-              <iframe src="https://www.youtube.com/embed/yEv0DCY0BCQ" title="Rooftop solar installation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/jSa1tvrrFZg?rel=0&modestbranding=1" title="Rooftop solar installation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             </div>
             <p class="media-card-caption">Rooftop solar panel installation walkthrough</p>
           </article>
           <article class="media-card media-card--video reveal">
             <div class="video-embed">
-              <iframe src="https://www.youtube.com/embed/1kUE0BZtTRc" title="Solar farm renewable energy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/1kUE0BZtTRc?rel=0&modestbranding=1" title="Solar farm renewable energy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             </div>
             <p class="media-card-caption">Large-scale solar farms and clean energy</p>
           </article>

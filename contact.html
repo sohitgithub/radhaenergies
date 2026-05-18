@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Contact Radha Energies in Jaso, Nagod, Satna, MP. Call +91 78792 12732 for solar installation and consultation.">
   <title>Contact | Radha Energies</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +16,6 @@
 </head>
 <body>
   <div class="page-transition" aria-hidden="true"></div>
-  <div class="loader" aria-label="Loading">
-    <div class="loader-rays"></div>
-    <img src="assets/logo.png" alt="Radha Energies" class="loader-logo" width="120" height="120">
-    <div class="loader-ring"></div>
-    <p class="loader-text">Harnessing Solar Power</p>
-  </div>
 
   <header class="header">
     <nav class="nav container">
@@ -29,24 +23,30 @@
         <img src="assets/logo.png" alt="Radha Energies Logo" class="logo-img" width="72" height="72">
         <span class="logo-text">Radha Energies</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>About</span></a></li>
+        <li><a href="services.html"><i class="fa-solid fa-solar-panel" aria-hidden="true"></i><span>Services</span></a></li>
+        <li><a href="projects.html"><i class="fa-solid fa-building" aria-hidden="true"></i><span>Projects</span></a></li>
+        <li><a href="contact.html" class="active"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact</span></a></li>
+        <li class="nav-cta-mobile-wrap">
+          <a href="contact.html" class="nav-cta-mobile">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            <span>Get Free Quote</span>
+          </a>
+        </li>
       </ul>
       <div class="nav-actions">
         <button class="theme-toggle" type="button" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
         <a href="contact.html" class="nav-cta">Get Quote</a>
-        <button class="menu-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="page-hero">
-      <div class="hero-bg hero-bg--media" style="position:absolute;inset:0;z-index:-1;"></div>
+      <div class="hero-bg hero-bg--media"></div>
       <div class="container">
         <nav class="breadcrumb"><a href="index.html">Home</a> / <span>Contact</span></nav>
         <h1>Let's Power Your <span class="text-gradient">Future</span></h1>

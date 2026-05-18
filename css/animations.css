@@ -1,13 +1,13 @@
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
-@keyframes loaderPulse {
-  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(255, 213, 79, 0.4)); }
-  50% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(0, 212, 255, 0.55)); }
-}
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes floatOrb {
   0%, 100% { transform: translate(0, 0); }
@@ -73,6 +73,10 @@
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(-6px); }
 }
+@keyframes statFloatMobile {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
 @keyframes orbitCW {
   from { transform: translate(-50%, -50%) rotate(0deg) translateX(42%) rotate(0deg); }
   to { transform: translate(-50%, -50%) rotate(360deg) translateX(42%) rotate(-360deg); }
@@ -84,6 +88,66 @@
 @keyframes btnGlowPulse {
   0%, 100% { box-shadow: 0 4px 24px rgba(29, 111, 184, 0.35); }
   50% { box-shadow: 0 8px 36px rgba(201, 135, 10, 0.4); }
+}
+@keyframes btnRipple {
+  from { transform: scale(0); opacity: 0.55; }
+  to { transform: scale(2.8); opacity: 0; }
+}
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes iconSlide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+@keyframes iconPop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+}
+@keyframes themeSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(201, 135, 10, 0.5); }
+  50% { transform: scale(1.2); opacity: 0.85; box-shadow: 0 0 0 6px rgba(201, 135, 10, 0); }
+}
+@keyframes cardLift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+@keyframes ctaBtnPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(201, 135, 10, 0.35); }
+  50% { box-shadow: 0 8px 32px rgba(201, 135, 10, 0.55); }
+}
+@keyframes navLinkSlide {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes socialBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+@keyframes statShine {
+  0% { left: -100%; }
+  100% { left: 150%; }
+}
+@keyframes faqOpen {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(45deg); }
 }
 
 .solar-ray {
@@ -110,4 +174,95 @@
     transform: translateY(0);
     filter: blur(0);
   }
+}
+
+/* —— Button & UI micro-interactions —— */
+.btn-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  transform: scale(0);
+  animation: btnRipple 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: none;
+  z-index: 0;
+}
+.btn-outline .btn-ripple {
+  background: rgba(29, 111, 184, 0.2);
+}
+.quick-btn .btn-ripple {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.reveal.visible .btn-anim,
+.reveal-left.visible .btn-anim,
+.reveal-right.visible .btn-anim,
+.hero-btns .btn {
+  animation: btnEntrance 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+.hero-btns .btn:nth-child(1) { animation-delay: 0.5s; }
+.hero-btns .btn:nth-child(2) { animation-delay: 0.62s; }
+.reveal.visible .btn-anim:nth-of-type(2) { animation-delay: 0.08s; }
+
+.btn .btn-hero-icon,
+.btn i.fa-arrow-right {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn:hover .btn-hero-icon,
+.btn:hover i.fa-arrow-right {
+  transform: translateX(5px);
+}
+
+.hero-badge .dot {
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+.cta-banner .btn-primary {
+  animation: ctaBtnPulse 2.5s ease-in-out infinite;
+}
+.cta-banner .btn-primary:hover {
+  animation: none;
+}
+
+.stat-card:hover .icon-wrap--stat {
+  animation: iconPop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.glass-card {
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    border-color 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+.project-card:hover .project-card-img {
+  transform: scale(1.1);
+}
+
+.theme-toggle:hover i {
+  animation: themeSpin 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.social-links a:hover {
+  animation: socialBounce 0.45s ease;
+}
+
+.faq-item.active .faq-icon {
+  animation: faqOpen 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.icon-wrap--service {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
+}
+.glass-card:hover .icon-wrap--service {
+  animation: iconWiggle 0.45s ease;
+}
+.glass-card:hover .icon-box--service {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.nav-links a:hover::after {
+  animation: navLinkSlide 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }

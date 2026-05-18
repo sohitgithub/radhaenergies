@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Radha Energies portfolio — completed solar projects, before/after transformations, and project statistics.">
   <title>Projects | Radha Energies</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +16,6 @@
 </head>
 <body>
   <div class="page-transition" aria-hidden="true"></div>
-  <div class="loader" aria-label="Loading">
-    <div class="loader-rays"></div>
-    <img src="assets/logo.png" alt="Radha Energies" class="loader-logo" width="120" height="120">
-    <div class="loader-ring"></div>
-    <p class="loader-text">Harnessing Solar Power</p>
-  </div>
 
   <header class="header">
     <nav class="nav container">
@@ -29,24 +23,30 @@
         <img src="assets/logo.png" alt="Radha Energies Logo" class="logo-img" width="72" height="72">
         <span class="logo-text">Radha Energies</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>About</span></a></li>
+        <li><a href="services.html"><i class="fa-solid fa-solar-panel" aria-hidden="true"></i><span>Services</span></a></li>
+        <li><a href="projects.html" class="active"><i class="fa-solid fa-building" aria-hidden="true"></i><span>Projects</span></a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact</span></a></li>
+        <li class="nav-cta-mobile-wrap">
+          <a href="contact.html" class="nav-cta-mobile">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            <span>Get Free Quote</span>
+          </a>
+        </li>
       </ul>
       <div class="nav-actions">
         <button class="theme-toggle" type="button" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
         <a href="contact.html" class="nav-cta">Get Quote</a>
-        <button class="menu-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="page-hero">
-      <div class="hero-bg hero-bg--media" style="position:absolute;inset:0;z-index:-1;"></div>
+      <div class="hero-bg hero-bg--media"></div>
       <div class="container">
         <nav class="breadcrumb"><a href="index.html">Home</a> / <span>Projects</span></nav>
         <h1>Our <span class="text-gradient">Solar Portfolio</span></h1>
@@ -57,59 +57,59 @@
     <section class="section" style="padding-top:0;">
       <div class="container">
         <div class="stats-grid reveal" style="margin-bottom:3rem;">
-          <div class="glass-card stat-card"><div class="stat-number" data-count="500" data-suffix="+">0</div><p class="stat-label">Projects Delivered</p></div>
-          <div class="glass-card stat-card"><div class="stat-number" data-count="50" data-suffix="MW">0</div><p class="stat-label">Total Capacity</p></div>
-          <div class="glass-card stat-card"><div class="stat-number" data-count="15" data-suffix="K">0</div><p class="stat-label">Tons CO₂ Offset</p></div>
-          <div class="glass-card stat-card"><div class="stat-number" data-count="8" data-suffix=" States">0</div><p class="stat-label">Pan-India Presence</p></div>
+          <div class="glass-card stat-card"><div class="stat-number" data-count="25" data-suffix="+">0</div><p class="stat-label">Installations Delivered</p></div>
+          <div class="glass-card stat-card"><div class="stat-number" data-count="150" data-suffix=" kW">0</div><p class="stat-label">Solar Capacity Installed</p></div>
+          <div class="glass-card stat-card"><div class="stat-number" data-count="40" data-suffix="+ tons">0</div><p class="stat-label">Tons CO₂ Offset</p></div>
+          <div class="glass-card stat-card"><div class="stat-number" data-count="3" data-suffix="+ Districts">0</div><p class="stat-label">Districts in MP</p></div>
         </div>
 
         <div class="projects-grid">
           <article class="project-card reveal">
             <img class="project-card-img" src="assets/project-villa.jpg" alt="Luxury villa rooftop solar installation" width="600" height="450" loading="lazy">
             <div class="project-overlay">
-              <h3>Luxury Villa — Gurgaon</h3>
-              <p style="font-size:0.9rem;color:var(--text-muted);">10 kW rooftop system</p>
-              <p class="project-stat">↓ 92% electricity bill · Before: ₹18,000/mo → After: ₹1,400/mo</p>
+              <h3>Home — Nagod, Satna</h3>
+              <p style="font-size:0.9rem;color:var(--text-muted);">3 kW rooftop system</p>
+              <p class="project-stat">↓ 55% electricity bill · Before: ₹4,800/mo → After: ₹2,150/mo</p>
             </div>
           </article>
           <article class="project-card reveal">
             <img class="project-card-img" src="assets/project-factory.jpg" alt="Industrial solar plant on factory roof" width="600" height="450" loading="lazy">
             <div class="project-overlay">
-              <h3>Textile Factory — Surat</h3>
-              <p style="font-size:0.9rem;color:var(--text-muted);">2.5 MW industrial plant</p>
-              <p class="project-stat">↓ 70% energy costs · 4-year ROI achieved</p>
+              <h3>Workshop — Maihar</h3>
+              <p style="font-size:0.9rem;color:var(--text-muted);">8 kW commercial</p>
+              <p class="project-stat">↓ 45% energy costs · Payback in ~5 years</p>
             </div>
           </article>
           <article class="project-card reveal">
             <img class="project-card-img" src="assets/project-commercial.jpg" alt="Commercial building solar installation" width="600" height="450" loading="lazy">
             <div class="project-overlay">
-              <h3>IT Campus — Bangalore</h3>
-              <p style="font-size:0.9rem;color:var(--text-muted);">500 kW commercial</p>
-              <p class="project-stat">↓ 65% carbon footprint · LEED certified</p>
+              <h3>Medical Clinic — Rewa</h3>
+              <p style="font-size:0.9rem;color:var(--text-muted);">5 kW rooftop</p>
+              <p class="project-stat">↓ 50% daytime power · Reliable backup support</p>
             </div>
           </article>
           <article class="project-card reveal">
             <img class="project-card-img" src="assets/project-campus.jpg" alt="University campus solar panels" width="600" height="450" loading="lazy">
             <div class="project-overlay">
-              <h3>University — Pune</h3>
-              <p style="font-size:0.9rem;color:var(--text-muted);">150 kW institutional</p>
-              <p class="project-stat">↓ 80% grid dependency · Educational showcase</p>
+              <h3>School Building — Satna</h3>
+              <p style="font-size:0.9rem;color:var(--text-muted);">10 kW institutional</p>
+              <p class="project-stat">↓ 48% grid use · Lower operating costs</p>
             </div>
           </article>
           <article class="project-card reveal">
             <img class="project-card-img" src="assets/project-mall.jpg" alt="Shopping mall rooftop solar" width="600" height="450" loading="lazy">
             <div class="project-overlay">
-              <h3>Shopping Mall — Delhi NCR</h3>
-              <p style="font-size:0.9rem;color:var(--text-muted);">800 kW rooftop + carport</p>
-              <p class="project-stat">↓ 55% operating costs · EV charging integrated</p>
+              <h3>Retail Shop — Nagod</h3>
+              <p style="font-size:0.9rem;color:var(--text-muted);">6 kW shop rooftop</p>
+              <p class="project-stat">↓ 42% monthly bill · Subsidy assistance</p>
             </div>
           </article>
           <article class="project-card reveal">
             <img class="project-card-img" src="assets/project-hospital.jpg" alt="Hospital solar power system" width="600" height="450" loading="lazy">
             <div class="project-overlay">
-              <h3>Hospital — Jaipur</h3>
-              <p style="font-size:0.9rem;color:var(--text-muted);">200 kW with battery backup</p>
-              <p class="project-stat">24/7 critical power · 99.9% uptime</p>
+              <h3>Farmhouse — Chitrakoot</h3>
+              <p style="font-size:0.9rem;color:var(--text-muted);">4 kW off-grid hybrid</p>
+              <p class="project-stat">↓ 52% diesel use · Cleaner rural power</p>
             </div>
           </article>
         </div>
@@ -121,18 +121,18 @@
         <div class="reveal-left">
           <span class="section-label">Transformation</span>
           <h2>Before & After Energy Impact</h2>
-          <p class="lead" style="margin-top:1rem;">Every project tells a story of reduced bills, lower emissions, and greater energy freedom. Our average client sees 40–90% reduction in electricity costs within the first year.</p>
+          <p class="lead" style="margin-top:1rem;">Every project tells a story of reduced bills, lower emissions, and greater energy freedom. Our average client sees 30–60% reduction in electricity costs within the first year.</p>
         </div>
-        <div class="glass-card reveal-right" style="padding:2rem;">
-          <div style="display:flex;justify-content:space-between;margin-bottom:1.5rem;">
-            <div><span style="color:#ef4444;font-weight:700;">Before</span><br><span style="font-size:2rem;font-family:var(--font-display);">₹24,000</span><br><span style="font-size:0.85rem;color:var(--text-muted);">Monthly bill</span></div>
-            <div style="font-size:2rem;align-self:center;">→</div>
-            <div style="text-align:right;"><span style="color:#4ade80;font-weight:700;">After</span><br><span style="font-size:2rem;font-family:var(--font-display);color:var(--solar-yellow);">₹2,100</span><br><span style="font-size:0.85rem;color:var(--text-muted);">Monthly bill</span></div>
+        <div class="glass-card reveal-right bill-card">
+          <div class="bill-compare">
+            <div><span style="color:#ef4444;font-weight:700;">Before</span><br><span class="bill-compare__amount">₹4,800</span><br><span style="font-size:0.85rem;color:var(--text-muted);">Monthly bill</span></div>
+            <span class="bill-compare__arrow" aria-hidden="true">→</span>
+            <div class="bill-compare__after"><span style="color:#4ade80;font-weight:700;">After</span><br><span class="bill-compare__amount" style="color:var(--solar-yellow);">₹2,150</span><br><span style="font-size:0.85rem;color:var(--text-muted);">Monthly bill</span></div>
           </div>
           <div style="height:8px;background:var(--navy-mid);border-radius:4px;overflow:hidden;">
-            <div style="width:91%;height:100%;background:var(--gradient-solar);border-radius:4px;"></div>
+            <div style="width:55%;height:100%;background:var(--gradient-solar);border-radius:4px;"></div>
           </div>
-          <p style="text-align:center;margin-top:1rem;font-size:0.9rem;color:var(--electric-blue);">91% average savings on featured residential projects</p>
+          <p style="text-align:center;margin-top:1rem;font-size:0.9rem;color:var(--electric-blue);">Up to 55% savings on featured residential projects</p>
         </div>
       </div>
     </section>
@@ -152,13 +152,26 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo-link"><img src="assets/logo.png" alt="" class="logo-img" width="72" height="72"><span class="logo-text">Radha Energies</span></a>
-          <p>Showcasing India's clean energy transformations.</p>
+          <a href="index.html" class="logo-link">
+            <img src="assets/logo.png" alt="Radha Energies" class="logo-img" width="72" height="72">
+            <span class="logo-text">Radha Energies</span>
+          </a>
+          <p>Premium solar solutions for homes, businesses, and industries. Powering tomorrow with clean energy today.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><span class="icon-wrap icon-wrap--social"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></span></a>
+            <a href="#" aria-label="LinkedIn"><span class="icon-wrap icon-wrap--social"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span></a>
+            <a href="#" aria-label="Instagram"><span class="icon-wrap icon-wrap--social"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span></a>
+            <a href="#" aria-label="Twitter"><span class="icon-wrap icon-wrap--social"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></span></a>
+          </div>
         </div>
-        <div><h4>Explore</h4><ul class="footer-links"><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li></ul></div>
+        <div><h4>Services</h4><ul class="footer-links"><li><a href="services.html">Rooftop Solar</a></li><li><a href="services.html">Commercial Solar</a></li><li><a href="services.html">Industrial Systems</a></li><li><a href="services.html">EV Charging</a></li></ul></div>
         <div><h4>Contact</h4><ul class="footer-links footer-contact-list"><li class="footer-contact-item"><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+917879212732">+91 78792 12732</a></li><li class="footer-contact-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:radhaenergies@gmail.com">radhaenergies@gmail.com</a></li><li class="footer-contact-item"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Jaso, Nagod, Satna, MP</span></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 Radha Energies. All rights reserved.</span><p class="footer-credit">Designed &amp; Developed by <a href="https://sohit-tiwarii.netlify.app/" target="_blank" rel="noopener noreferrer">Sohit Tiwari</a></p></div>
+      <div class="footer-bottom">
+        <span>© 2026 Radha Energies. All rights reserved.</span>
+        <p class="footer-credit">Designed &amp; Developed by <a href="https://sohit-tiwarii.netlify.app/" target="_blank" rel="noopener noreferrer">Sohit Tiwari</a></p>
+      </div>
     </div>
   </footer>
   <script src="js/main.js"></script>

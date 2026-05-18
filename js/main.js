@@ -1,17 +1,12 @@
 (function () {
   'use strict';
 
-  // Loader
-  const loader = document.querySelector('.loader');
-  window.addEventListener('load', () => {
-    setTimeout(() => loader?.classList.add('hidden'), 1800);
-  });
-
   // Theme toggle
   const themeToggle = document.querySelector('.theme-toggle');
   const savedTheme = localStorage.getItem('radha-theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
-  themeToggle?.addEventListener('click', () => {
+  themeToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
     const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('radha-theme', next);
@@ -32,14 +27,138 @@
     header?.classList.toggle('scrolled', window.scrollY > 50);
   }, { passive: true });
 
-  // Mobile menu
+  // Mobile menu — panel is moved to <body> so it is not clipped by the header
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
-  menuToggle?.addEventListener('click', () => navLinks?.classList.toggle('open'));
+  const nav = document.querySelector('.nav');
+  const navActions = document.querySelector('.nav-actions');
+  const mobileMq = window.matchMedia('(max-width: 768px)');
+
+  let navBackdrop = document.querySelector('.nav-backdrop');
+  if (!navBackdrop) {
+    navBackdrop = document.createElement('div');
+    navBackdrop.className = 'nav-backdrop';
+    navBackdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(navBackdrop);
+  }
+
+  if (menuToggle && navLinks) {
+    if (!navLinks.id) navLinks.id = 'nav-menu';
+    menuToggle.setAttribute('aria-controls', navLinks.id);
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function isMobileNav() {
+    return mobileMq.matches;
+  }
+
+  function mountMobileNav() {
+    if (!navLinks) return;
+    navLinks.classList.add('nav-mobile-panel');
+    if (navLinks.parentElement !== document.body) {
+      document.body.appendChild(navLinks);
+    }
+    if (!navLinks.classList.contains('open')) {
+      navLinks.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  function unmountMobileNav() {
+    if (!navLinks || !nav || !navActions) return;
+    navLinks.classList.remove('nav-mobile-panel', 'open');
+    if (navLinks.parentElement === document.body) {
+      nav.insertBefore(navLinks, navActions);
+    }
+    navLinks.removeAttribute('aria-hidden');
+  }
+
+  function setMenuOpen(open) {
+    if (!navLinks || !menuToggle) return;
+    if (open && !isMobileNav()) return;
+
+    navLinks.classList.toggle('open', open);
+    navBackdrop.classList.toggle('is-visible', open);
+    menuToggle.classList.toggle('active', open);
+    header?.classList.toggle('menu-open', open);
+    document.body.classList.toggle('nav-open', open);
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    navLinks.setAttribute('aria-hidden', open ? 'false' : 'true');
+    navBackdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+  }
+
+  function syncNavLayout() {
+    if (isMobileNav()) {
+      mountMobileNav();
+    } else {
+      setMenuOpen(false);
+      unmountMobileNav();
+    }
+  }
+
+  syncNavLayout();
+  mobileMq.addEventListener('change', syncNavLayout);
+
+  menuToggle?.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!isMobileNav()) return;
+    setMenuOpen(!navLinks.classList.contains('open'));
+  });
+
+  navBackdrop.addEventListener('click', () => setMenuOpen(false));
+
+  navLinks?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setMenuOpen(false);
+  });
+
+  // Button ripple, entrance class & magnetic hero CTAs
+  function initButtonAnimations() {
+    document.querySelectorAll(
+      '.btn, .btn-submit, .nav-cta, .quick-btn, .map-directions-btn'
+    ).forEach((btn) => {
+      btn.classList.add('btn-anim');
+      if (btn.dataset.rippleBound) return;
+      btn.dataset.rippleBound = 'true';
+      btn.addEventListener('click', (e) => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const rect = btn.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height) * 1.2;
+        const ripple = document.createElement('span');
+        ripple.className = 'btn-ripple';
+        ripple.style.width = `${size}px`;
+        ripple.style.height = `${size}px`;
+        ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+        ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+        btn.appendChild(ripple);
+        ripple.addEventListener('animationend', () => ripple.remove());
+      });
+    });
+  }
+  initButtonAnimations();
+
+  if (window.matchMedia('(min-width: 769px) and (prefers-reduced-motion: no-preference)').matches) {
+    document.querySelectorAll('.btn-hero').forEach((btn) => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+        const y = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+        btn.style.transform = `translate(${x * 4}px, ${y * 4 - 3}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
+    });
+  }
 
   // Active nav link
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach((link) => {
+  document.querySelectorAll('.nav-links a:not(.nav-cta-mobile)').forEach((link) => {
+    link.classList.remove('active');
     const href = link.getAttribute('href');
     if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('active');
@@ -69,7 +188,7 @@
   const heroSection = document.querySelector('.hero--banner');
   const heroContent = document.querySelector('.hero--banner .hero-content');
   const heroVisual = document.querySelector('.hero-energy-visual');
-  if (heroSection && (heroContent || heroVisual)) {
+  if (heroSection && (heroContent || heroVisual) && window.matchMedia('(min-width: 769px)').matches) {
     window.addEventListener('scroll', () => {
       const rect = heroSection.getBoundingClientRect();
       if (rect.bottom < 0 || rect.top > window.innerHeight) return;
@@ -90,9 +209,9 @@
   // Live kW ticker in hero
   const kwEl = document.querySelector('[data-hero-kw]');
   if (kwEl) {
-    let kw = 12.4;
+    let kw = 3.6;
     setInterval(() => {
-      kw = Math.min(14.2, Math.max(11.8, kw + (Math.random() - 0.48) * 0.15));
+      kw = Math.min(4.2, Math.max(3.1, kw + (Math.random() - 0.48) * 0.08));
       kwEl.textContent = kw.toFixed(1);
     }, 2200);
   }

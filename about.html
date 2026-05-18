@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="About Radha Energies — Meet founder Anurag Mishra, our mission, vision, and sustainable solar energy story.">
   <title>About Us | Radha Energies</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +16,6 @@
 </head>
 <body>
   <div class="page-transition" aria-hidden="true"></div>
-  <div class="loader" aria-label="Loading">
-    <div class="loader-rays"></div>
-    <img src="assets/logo.png" alt="Radha Energies" class="loader-logo" width="120" height="120">
-    <div class="loader-ring"></div>
-    <p class="loader-text">Harnessing Solar Power</p>
-  </div>
 
   <header class="header">
     <nav class="nav container">
@@ -29,24 +23,30 @@
         <img src="assets/logo.png" alt="Radha Energies Logo" class="logo-img" width="72" height="72">
         <span class="logo-text">Radha Energies</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a></li>
+        <li><a href="about.html" class="active"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>About</span></a></li>
+        <li><a href="services.html"><i class="fa-solid fa-solar-panel" aria-hidden="true"></i><span>Services</span></a></li>
+        <li><a href="projects.html"><i class="fa-solid fa-building" aria-hidden="true"></i><span>Projects</span></a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact</span></a></li>
+        <li class="nav-cta-mobile-wrap">
+          <a href="contact.html" class="nav-cta-mobile">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            <span>Get Free Quote</span>
+          </a>
+        </li>
       </ul>
       <div class="nav-actions">
         <button class="theme-toggle" type="button" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
         <a href="contact.html" class="nav-cta">Get Quote</a>
-        <button class="menu-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="page-hero">
-      <div class="hero-bg hero-bg--media" style="position:absolute;inset:0;z-index:-1;"></div>
+      <div class="hero-bg hero-bg--media"></div>
       <div class="hero-gradient-orb hero-orb-1" data-parallax="0.1" style="position:absolute;"></div>
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span>About</span></nav>
@@ -106,24 +106,24 @@
         </div>
         <div class="timeline">
           <div class="timeline-item reveal">
-            <div class="timeline-year">2018</div>
-            <h3>Founded with a Vision</h3>
-            <p style="color:var(--text-muted);">Radha Energies launched with a mission to democratize solar power across residential markets.</p>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-year">2020</div>
-            <h3>Commercial Expansion</h3>
-            <p style="color:var(--text-muted);">Entered industrial and commercial sectors with megawatt-scale installations.</p>
-          </div>
-          <div class="timeline-item reveal">
             <div class="timeline-year">2022</div>
-            <h3>500+ Projects Milestone</h3>
-            <p style="color:var(--text-muted);">Crossed 500 successful installations with 98% customer satisfaction rate.</p>
+            <h3>Founded in Satna, MP</h3>
+            <p style="color:var(--text-muted);">Radha Energies started in Jaso, Nagod with a mission to bring affordable solar to local homes.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2023</div>
+            <h3>First Rooftop Installs</h3>
+            <p style="color:var(--text-muted);">Completed our earliest residential projects and built trust through hands-on, personal service.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-year">2024</div>
+            <h3>Shops &amp; Small Business</h3>
+            <p style="color:var(--text-muted);">Expanded to local shops, clinics, and workshops with subsidy guidance for customers.</p>
           </div>
           <div class="timeline-item reveal">
             <div class="timeline-year">2026</div>
-            <h3>National Leader</h3>
-            <p style="color:var(--text-muted);">50MW+ clean energy generated, EV charging integration, and AI-powered monitoring launched.</p>
+            <h3>Serving Central MP</h3>
+            <p style="color:var(--text-muted);">Growing across Satna, Rewa, and nearby districts with quality installs and honest support.</p>
           </div>
         </div>
       </div>
@@ -139,10 +139,10 @@
         <div class="reveal-right">
           <span class="section-label">Sustainability</span>
           <h2>The Renewable Energy Story</h2>
-          <p class="lead" style="margin-top:1rem;">Every kilowatt we install displaces fossil fuel generation. Our projects have offset over 15,000 tons of CO₂ — equivalent to planting 700,000 trees.</p>
-          <div class="stats-grid" style="margin-top:2rem;grid-template-columns:repeat(2,1fr);">
-            <div class="glass-card stat-card"><div class="stat-number" data-count="15000" data-suffix="+">0</div><p class="stat-label">Tons CO₂ Saved</p></div>
-            <div class="glass-card stat-card"><div class="stat-number" data-count="12" data-suffix=" yrs">0</div><p class="stat-label">Industry Experience</p></div>
+          <p class="lead" style="margin-top:1rem;">Every installation helps families use less grid power and supports a cleaner future for our region.</p>
+          <div class="stats-grid stats-grid--2col" style="margin-top:2rem;">
+            <div class="glass-card stat-card"><div class="stat-number" data-count="40" data-suffix="+">0</div><p class="stat-label">Tons CO₂ Saved</p></div>
+            <div class="glass-card stat-card"><div class="stat-number" data-count="3" data-suffix="+ yrs">0</div><p class="stat-label">Years in Solar</p></div>
           </div>
         </div>
       </div>
@@ -184,19 +184,19 @@
         <div class="media-grid">
           <article class="media-card media-card--video reveal">
             <div class="video-embed">
-              <iframe src="https://www.youtube.com/embed/xKxrkGTscVI" title="How solar panels work" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/xKxrkht7CpY?rel=0&modestbranding=1" title="How solar panels work" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             </div>
             <p class="media-card-caption">How solar panels generate electricity</p>
           </article>
           <article class="media-card media-card--video reveal">
             <div class="video-embed">
-              <iframe src="https://www.youtube.com/embed/yEv0DCY0BCQ" title="Rooftop solar installation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/jSa1tvrrFZg?rel=0&modestbranding=1" title="Rooftop solar installation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             </div>
             <p class="media-card-caption">Professional rooftop installation</p>
           </article>
           <article class="media-card media-card--video reveal">
             <div class="video-embed">
-              <iframe src="https://www.youtube.com/embed/1kUE0BZtTRc" title="Solar farm" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/1kUE0BZtTRc?rel=0&modestbranding=1" title="Solar farm" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             </div>
             <p class="media-card-caption">Solar farms and sustainable power</p>
           </article>

@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Radha Energies — Premium solar panel installation, rooftop solar, industrial systems & green energy consultation. Powering tomorrow with clean solar energy.">
   <meta name="keywords" content="solar energy, solar panels, rooftop solar, renewable energy, Radha Energies">
   <title>Radha Energies | Clean Solar Energy Solutions</title>
@@ -18,31 +18,29 @@
 <body>
   <div class="page-transition" aria-hidden="true"></div>
 
-  <div class="loader" aria-label="Loading">
-    <div class="loader-rays"></div>
-    <img src="assets/logo.png" alt="Radha Energies" class="loader-logo" width="120" height="120">
-    <div class="loader-ring"></div>
-    <p class="loader-text">Harnessing Solar Power</p>
-  </div>
-
-
   <header class="header">
     <nav class="nav container">
       <a href="index.html" class="logo-link">
         <img src="assets/logo.png" alt="Radha Energies Logo" class="logo-img" width="72" height="72">
         <span class="logo-text">Radha Energies</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html" class="active"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>About</span></a></li>
+        <li><a href="services.html"><i class="fa-solid fa-solar-panel" aria-hidden="true"></i><span>Services</span></a></li>
+        <li><a href="projects.html"><i class="fa-solid fa-building" aria-hidden="true"></i><span>Projects</span></a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact</span></a></li>
+        <li class="nav-cta-mobile-wrap">
+          <a href="contact.html" class="nav-cta-mobile">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            <span>Get Free Quote</span>
+          </a>
+        </li>
       </ul>
       <div class="nav-actions">
         <button class="theme-toggle" type="button" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
         <a href="contact.html" class="nav-cta">Get Quote</a>
-        <button class="menu-toggle" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </header>
@@ -52,7 +50,7 @@
       <div class="hero-bg hero-bg--media"></div>
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="hero-badge"><span class="dot"></span><span class="icon-wrap icon-wrap--badge"><i class="fa-solid fa-sun" aria-hidden="true"></i></span> India's Trusted Solar Partner</div>
+          <div class="hero-badge"><span class="dot"></span><span class="icon-wrap icon-wrap--badge"><i class="fa-solid fa-sun" aria-hidden="true"></i></span> Your Local Solar Partner in MP</div>
           <h1>Powering Tomorrow with <span>Clean Solar Energy</span></h1>
           <p class="hero-tagline">Transform your home and business with cutting-edge solar technology. Sustainable power, maximum savings, zero compromise.</p>
           <div class="hero-btns">
@@ -62,6 +60,7 @@
         </div>
         <div class="hero-energy-visual" aria-hidden="true">
           <div class="hero-energy-scene">
+            <div class="hero-energy-orbit">
             <div class="hero-energy-ring hero-energy-ring--1"></div>
             <div class="hero-energy-ring hero-energy-ring--2"></div>
             <div class="hero-energy-ring hero-energy-ring--3"></div>
@@ -72,10 +71,11 @@
             <div class="hero-bolt-float hero-bolt-float--2"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
             <div class="hero-orbit-dot hero-orbit-dot--1"></div>
             <div class="hero-orbit-dot hero-orbit-dot--2"></div>
+            </div>
             <div class="hero-energy-stat">
-              <span class="hero-energy-value" data-hero-kw>12.4</span>
+              <span class="hero-energy-value" data-hero-kw>3.6</span>
               <span class="hero-energy-unit">kW</span>
-              <span class="hero-energy-label">Live solar output</span>
+              <span class="hero-energy-label">Sample home output</span>
             </div>
           </div>
         </div>
@@ -103,8 +103,8 @@
       <div class="container split-grid">
         <div class="reveal-left">
           <span class="section-label">About Radha Energies</span>
-          <h2>Leading India's Renewable Revolution</h2>
-          <p class="lead" style="margin-top:1rem;">Radha Energies delivers end-to-end solar solutions — from residential rooftops to industrial megawatt plants. We combine premium technology with expert consultation to maximize your energy independence.</p>
+          <h2>Growing Solar Across Madhya Pradesh</h2>
+          <p class="lead" style="margin-top:1rem;">Radha Energies delivers honest, end-to-end solar solutions for homes and local businesses across Madhya Pradesh — quality panels, clear pricing, and support you can reach by phone.</p>
           <a href="about.html" class="btn btn-primary" style="margin-top:2rem;">Discover Our Story →</a>
         </div>
         <div class="intro-visual reveal-right parallax-layer" data-parallax="0.08">
@@ -119,24 +119,24 @@
       <div class="container">
         <div class="text-center reveal" style="text-align:center;margin-bottom:3rem;">
           <span class="section-label" style="justify-content:center;">Impact</span>
-          <h2>Energy Savings That Matter</h2>
+          <h2>Trusted Local Impact</h2>
         </div>
         <div class="stats-grid">
           <div class="glass-card stat-card reveal">
-            <span class="icon-wrap icon-wrap--stat"><i class="fa-solid fa-solar-panel" aria-hidden="true"></i></span><div class="stat-number" data-count="500" data-suffix="+">0</div>
-            <p class="stat-label">Projects Completed</p>
+            <span class="icon-wrap icon-wrap--stat"><i class="fa-solid fa-solar-panel" aria-hidden="true"></i></span><div class="stat-number" data-count="25" data-suffix="+">0</div>
+            <p class="stat-label">Installations Completed</p>
           </div>
           <div class="glass-card stat-card reveal">
-            <span class="icon-wrap icon-wrap--stat"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span><div class="stat-number" data-count="50" data-suffix="MW">0</div>
-            <p class="stat-label">Clean Energy Generated</p>
+            <span class="icon-wrap icon-wrap--stat"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span><div class="stat-number" data-count="150" data-suffix=" kW">0</div>
+            <p class="stat-label">Solar Capacity Installed</p>
           </div>
           <div class="glass-card stat-card reveal">
-            <span class="icon-wrap icon-wrap--stat"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span><div class="stat-number" data-count="98" data-suffix="%">0</div>
-            <p class="stat-label">Client Satisfaction</p>
+            <span class="icon-wrap icon-wrap--stat"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span><div class="stat-number" data-count="25" data-suffix="+">0</div>
+            <p class="stat-label">Happy Clients Served</p>
           </div>
           <div class="glass-card stat-card reveal">
-            <span class="icon-wrap icon-wrap--stat"><i class="fa-solid fa-indian-rupee-sign" aria-hidden="true"></i></span><div class="stat-number" data-count="40" data-suffix="%">0</div>
-            <p class="stat-label">Average Bill Reduction</p>
+            <span class="icon-wrap icon-wrap--stat"><i class="fa-solid fa-indian-rupee-sign" aria-hidden="true"></i></span><div class="stat-number" data-count="50" data-suffix="%">0</div>
+            <p class="stat-label">Up to 50% Bill Savings</p>
           </div>
         </div>
       </div>
@@ -146,8 +146,8 @@
       <div class="container">
         <div class="reveal" style="margin-bottom:3rem;">
           <span class="section-label">Smart Energy Dashboard</span>
-          <h2>Real-Time Solar Performance</h2>
-          <p class="lead">Monitor generation, savings, and carbon offset with our AI-inspired energy analytics.</p>
+          <h2>What Solar Can Do for You</h2>
+          <p class="lead">See how a typical home system can lower bills and carbon footprint.</p>
         </div>
         <div class="dashboard-preview reveal">
           <div class="dashboard-chart">
@@ -162,9 +162,9 @@
             </div>
           </div>
           <div style="display:flex;flex-direction:column;gap:1rem;">
-            <div class="dashboard-metric"><strong>12.4 kW</strong>Today's Output</div>
-            <div class="dashboard-metric"><strong>₹8,420</strong>Monthly Savings</div>
-            <div class="dashboard-metric"><strong>2.1 tons</strong>CO₂ Offset</div>
+            <div class="dashboard-metric"><strong>3.6 kW</strong>Sample daily output</div>
+            <div class="dashboard-metric"><strong>₹2,400</strong>Typical monthly savings</div>
+            <div class="dashboard-metric"><strong>0.5 tons</strong>CO₂ offset / year</div>
           </div>
         </div>
       </div>
@@ -187,7 +187,7 @@
             <img class="service-thumb" src="assets/service-industrial.jpg" alt="Industrial solar panel farm" width="400" height="250" loading="lazy">
             <span class="icon-wrap icon-wrap--service"><i class="fa-solid fa-industry" aria-hidden="true"></i></span>
             <h3>Industrial Systems</h3>
-            <p style="color:var(--text-muted);margin-top:0.75rem;font-size:0.9rem;">Megawatt-scale solar for factories, warehouses, and commercial campuses.</p>
+            <p style="color:var(--text-muted);margin-top:0.75rem;font-size:0.9rem;">Scalable solar for shops, workshops & small industry, warehouses, and commercial campuses.</p>
           </div>
           <div class="glass-card reveal">
             <img class="service-thumb" src="assets/about-solar.jpg" alt="Solar energy consultation" width="400" height="250" loading="lazy">
@@ -212,19 +212,19 @@
         <div class="media-grid">
           <article class="media-card media-card--video reveal">
             <div class="video-embed">
-              <iframe src="https://www.youtube.com/embed/xKxrkGTscVI" title="How solar panels work" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/xKxrkht7CpY?rel=0&modestbranding=1" title="How solar panels work" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             </div>
             <p class="media-card-caption">How solar panels convert sunlight into electricity</p>
           </article>
           <article class="media-card media-card--video reveal">
             <div class="video-embed">
-              <iframe src="https://www.youtube.com/embed/yEv0DCY0BCQ" title="Rooftop solar installation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/jSa1tvrrFZg?rel=0&modestbranding=1" title="Rooftop solar installation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             </div>
             <p class="media-card-caption">Rooftop solar panel installation process</p>
           </article>
           <article class="media-card media-card--video reveal">
             <div class="video-embed">
-              <iframe src="https://www.youtube.com/embed/1kUE0BZtTRc" title="Solar farm and renewable energy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              <iframe src="https://www.youtube-nocookie.com/embed/1kUE0BZtTRc?rel=0&modestbranding=1" title="Solar farm and renewable energy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
             </div>
             <p class="media-card-caption">Large-scale solar farms and renewable power</p>
           </article>
@@ -245,11 +245,11 @@
           </div>
           <div class="trust-item reveal">
             <span class="icon-wrap icon-wrap--trust"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></span>
-            <div><strong>48-Hour Installation</strong><br><span style="color:var(--text-muted);font-size:0.9rem;">Fast, professional deployment for residential projects</span></div>
+            <div><strong>7–10 Day Installation</strong><br><span style="color:var(--text-muted);font-size:0.9rem;">Typical home installs completed within 7–10 days after approval</span></div>
           </div>
           <div class="trust-item reveal">
             <span class="icon-wrap icon-wrap--trust"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
-            <div><strong>End-to-End Support</strong><br><span style="color:var(--text-muted);font-size:0.9rem;">Maintenance, monitoring, and 24/7 customer care</span></div>
+            <div><strong>End-to-End Support</strong><br><span style="color:var(--text-muted);font-size:0.9rem;">Installation support and guidance when you need us</span></div>
           </div>
         </div>
       </div>
@@ -259,7 +259,7 @@
       <div class="container">
         <div class="cta-banner reveal">
           <h2 style="position:relative;z-index:1;">Ready to Go Solar?</h2>
-          <p class="lead" style="margin:1rem auto 2rem;position:relative;z-index:1;">Join hundreds of satisfied customers powering their future with Radha Energies.</p>
+          <p class="lead" style="margin:1rem auto 2rem;position:relative;z-index:1;">Join families across Madhya Pradesh powering their future with Radha Energies.</p>
           <a href="contact.html" class="btn btn-primary" style="position:relative;z-index:1;">Get Free Consultation →</a>
         </div>
       </div>
